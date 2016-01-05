@@ -8,7 +8,7 @@ import configureStore from './store/configureStore'
 
 let store = configureStore();
 
-let rootElement = document.getElementById('uptour');
+let rootElement = document.getElementById('convey');
 
 render(
   <Provider store={store}>

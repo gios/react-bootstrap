@@ -1,5 +1,5 @@
-# UpTour
-**Plan your trip**
+# Convey
+**Create tickets easily**
 
 ## Technologies
 * Redux
