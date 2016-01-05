@@ -3,8 +3,6 @@ import thunk from 'redux-thunk'
 
 import todoApp from '../reducers/todoReducer'
 
-console.log(window.devToolsExtension);
-
 const finalCreateStore = compose(
   applyMiddleware(thunk),
   window.devToolsExtension ? window.devToolsExtension() : f => f
