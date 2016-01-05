@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gios/uptour.git"
+    "url": "git+https://github.com/gios/convey.git"
   },
   "author": "Gios",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gios/uptour/issues"
+    "url": "https://github.com/gios/convey/issues"
   },
-  "homepage": "https://github.com/gios/uptour#readme",
+  "homepage": "https://github.com/gios/convey#readme",
   "dependencies": {
     "parse": "^1.6.13",
     "react": "^0.14.5",
