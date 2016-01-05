@@ -1,9 +1,9 @@
-# uptour
-Plan your trip
+# UpTour
+**Plan your trip**
 
 ## Technologies
-Redux
-React
-Webpack
-SCSS
-Babel
+* Redux
+* React
+* Webpack
+* SCSS
+* Babel
