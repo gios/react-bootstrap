@@ -1,18 +1,18 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { createStore } from 'redux'
+import { Provider } from 'react-redux'
 
-class App extends React.Component {
-  constructor() {
-      super();
-  }
+import App from './containers/App'
+import todoApp from './reducers/todoReducer'
 
-  render() {
-    return (
-        <div>
-          Hello!!!
-        </div>
-      );
-  }
-}
+let store = createStore(todoApp);
 
-ReactDOM.render(<App />, document.getElementById("uptour"));
+let rootElement = document.getElementById('uptour');
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  rootElement
+);
