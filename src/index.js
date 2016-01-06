@@ -1,20 +1,35 @@
+// React, Redux
 import React from 'react'
 import { render } from 'react-dom'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
-import App from './containers/App'
+// Routing
+import { Router, Route,IndexRoute } from 'react-router'
+import { createHistory } from 'history'
+import { syncReduxAndRouter } from 'redux-simple-router'
+
+// Containers
+import Counter from './containers/Counter'
+
+// Store
 import configureStore from './store/configureStore'
 
+// Styles (SCSS)
 import './index.scss'
 
-let store = configureStore();
+// Sync Store and Router
+const store = configureStore();
+const history = createHistory()
 
-let rootElement = document.getElementById('convey');
+syncReduxAndRouter(history, store)
 
 render(
   <Provider store={store}>
-    <App />
+    <Router history={history}>
+      <Route path="/" component={Counter}>
+      </Route>
+    </Router>
   </Provider>,
-  rootElement
+  document.getElementById('convey')
 );

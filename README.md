@@ -7,3 +7,4 @@
 * Webpack
 * SCSS
 * Babel
+* Immutable
