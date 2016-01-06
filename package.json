@@ -18,11 +18,15 @@
   },
   "homepage": "https://github.com/gios/convey#readme",
   "dependencies": {
+    "history": "^1.17.0",
+    "immutable": "^3.7.6",
     "parse": "^1.6.13",
     "react": "^0.14.5",
     "react-dom": "^0.14.5",
     "react-redux": "^4.0.6",
-    "redux": "^3.0.5"
+    "react-router": "^1.0.3",
+    "redux": "^3.0.5",
+    "redux-simple-router": "^1.0.2"
   },
   "devDependencies": {
     "babel-core": "^6.3.26",
