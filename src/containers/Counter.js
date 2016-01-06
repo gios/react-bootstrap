@@ -8,8 +8,7 @@ export default class Counter extends Component {
     return (
       <div className="row">
         <div className="col-sm-4 col-sm-offset-4">
-          Some state changes:
-          {amount}<br />
+          Value: {amount}<br />
           <button onClick={() => dispatch(increase(1))}>Increase</button>
           <button onClick={() => dispatch(decrease(1))}>Decrease</button>
         </div>
@@ -23,12 +22,10 @@ Counter.propTypes = {
   decrease: React.PropTypes.func
 }
 
-function select(state) {
+function inject(state) {
   return {
-    amount: state.counter.number.amount,
-    increase,
-    decrease
+    amount: state.counter.number.amount
   }
 }
 
-export default connect(select)(Counter)
+export default connect(inject)(Counter)
