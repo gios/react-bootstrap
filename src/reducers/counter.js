@@ -1,17 +1,16 @@
 import { combineReducers } from 'redux'
+import Immutable from 'immutable'
 import { INCREASE, DECREASE } from '../constants/mainConstants'
 
-const initialState = {
-  amount: 1
-};
+const numberState = Immutable.Map({ amount: 1 })
 
-function number(state = initialState, action) {
+function number(state = numberState.toObject(), action) {
   switch (action.type) {
     case INCREASE:
-      return { amount: state.amount + action.amount }
+      return numberState.set('amount', state.amount + action.amount).toObject()
       break;
     case DECREASE:
-      return { amount: state.amount - action.amount }
+      return numberState.set('amount', state.amount - action.amount).toObject()
       break;
     default:
       return state;
