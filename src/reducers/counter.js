@@ -2,17 +2,16 @@ import { combineReducers } from 'redux'
 import { INCREASE, DECREASE } from '../constants/mainConstants'
 
 const initialState = {
-  number: 1
+  amount: 1
 };
 
-function updateNumber(state = initialState, action) {
-  console.log(state, action);
+function number(state = initialState, action) {
   switch (action.type) {
     case INCREASE:
-      return { number: state.number + action.number }
+      return { amount: state.amount + action.amount }
       break;
     case DECREASE:
-      return { number: state.number - action.number }
+      return { amount: state.amount - action.amount }
       break;
     default:
       return state;
@@ -20,7 +19,7 @@ function updateNumber(state = initialState, action) {
 }
 
 const counter = combineReducers({
-  updateNumber
+  number
 })
 
 export default counter

@@ -4,12 +4,12 @@ import { increase, decrease } from '../actions/mainActions'
 
 export default class Counter extends Component {
   render() {
-    const { dispatch } = this.props
-    console.log(this.props);
+    const { dispatch, amount } = this.props
     return (
       <div className="row">
         <div className="col-sm-4 col-sm-offset-4">
           Some state changes:
+          {amount}<br />
           <button onClick={() => dispatch(increase(1))}>Increase</button>
           <button onClick={() => dispatch(decrease(1))}>Decrease</button>
         </div>
@@ -25,6 +25,7 @@ Counter.propTypes = {
 
 function select(state) {
   return {
+    amount: state.counter.number.amount,
     increase,
     decrease
   }

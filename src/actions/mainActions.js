@@ -1,9 +1,9 @@
 import { INCREASE, DECREASE } from '../constants/mainConstants'
 
-export function increase(number) {
-  return { type: INCREASE, number };
+export function increase(amount) {
+  return { type: INCREASE, amount };
 }
 
-export function decrease(number) {
-  return { type: DECREASE, number };
+export function decrease(amount) {
+  return { type: DECREASE, amount };
 }

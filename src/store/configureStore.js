@@ -9,9 +9,10 @@ const finalCreateStore = compose(
   window.devToolsExtension ? window.devToolsExtension() : f => f
 )(createStore)
 
-const reducer = combineReducers(Object.assign({}, counter, {
+const reducer = combineReducers({
+  counter,
   routing: routeReducer
-}))
+})
 
 export default function configureStore(initialState) {
   return finalCreateStore(reducer, initialState)
