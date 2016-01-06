@@ -5,7 +5,7 @@ import { increase, decrease } from '../actions/mainActions'
 export default class Counter extends Component {
   render() {
     const { dispatch } = this.props
-    console.log(dispatch);
+    console.log(this.props);
     return (
       <div className="row">
         <div className="col-sm-4 col-sm-offset-4">
@@ -23,7 +23,11 @@ Counter.propTypes = {
   decrease: React.PropTypes.func
 }
 
-export default connect(
-  increase,
-  decrease
-)(Counter)
+function select(state) {
+  return {
+    increase,
+    decrease
+  }
+}
+
+export default connect(select)(Counter)

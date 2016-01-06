@@ -19,7 +19,7 @@ import configureStore from './store/configureStore'
 import './index.scss'
 
 // Sync Store and Router
-const store = configureStore();
+const store = configureStore()
 const history = createHistory()
 
 syncReduxAndRouter(history, store)
