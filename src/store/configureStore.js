@@ -3,6 +3,7 @@ import thunk from 'redux-thunk'
 import { routeReducer } from 'redux-simple-router'
 
 import counter from '../reducers/counter'
+import register from '../reducers/register'
 
 const finalCreateStore = compose(
   applyMiddleware(thunk),
@@ -10,6 +11,7 @@ const finalCreateStore = compose(
 )(createStore)
 
 const reducer = combineReducers({
+  register,
   counter,
   routing: routeReducer
 })
