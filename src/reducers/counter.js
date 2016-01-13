@@ -1,10 +1,9 @@
-import { combineReducers } from 'redux'
 import Immutable from 'immutable'
-import { INCREASE, DECREASE } from '../constants/mainConstants'
+import { INCREASE, DECREASE } from '../actions/mainActions'
 
 const numberState = Immutable.Map({ amount: 1 })
 
-function number(state = numberState.toObject(), action) {
+export function number(state = numberState.toObject(), action) {
   switch (action.type) {
     case INCREASE:
       return numberState.set('amount', state.amount + action.amount).toObject()
@@ -16,9 +15,3 @@ function number(state = numberState.toObject(), action) {
       return state;
   }
 }
-
-const counter = combineReducers({
-  number
-})
-
-export default counter

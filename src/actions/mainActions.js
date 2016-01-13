@@ -1,4 +1,5 @@
-import { INCREASE, DECREASE } from '../constants/mainConstants'
+export const INCREASE = 'INCREASE'
+export const DECREASE = 'DECREASE'
 
 export function increase(amount) {
   return { type: INCREASE, amount };

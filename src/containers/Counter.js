@@ -1,8 +1,7 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { increase, decrease } from '../actions/mainActions'
 import { pushPath } from 'redux-simple-router'
-import Parse from 'parse'
 
 export default class Counter extends Component {
   render() {
@@ -12,24 +11,16 @@ export default class Counter extends Component {
         <div className="col-sm-4 col-sm-offset-4">
           Value: {amount}<br />
           <button onClick={() => dispatch(increase(1))}>Increase</button>
-          <button onClick={() => dispatch(decrease(1))}>Decrease</button><br/>
-          <button onClick={() => dispatch(pushPath('/register'))}>Registration</button>
-          <button onClick={() => dispatch(pushPath('/login'))}>Login</button>
-          <button onClick={() => Parse.User.logOut() }>Logout</button>
+          <button onClick={() => dispatch(decrease(1))}>Decrease</button>
         </div>
       </div>
     )
   }
 }
 
-Counter.propTypes = {
-  increase: React.PropTypes.func,
-  decrease: React.PropTypes.func
-}
-
 function inject(state) {
   return {
-    amount: state.counter.number.amount
+    amount: state.reducers.number.amount
   }
 }
 

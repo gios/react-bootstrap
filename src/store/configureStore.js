@@ -2,8 +2,7 @@ import { createStore, applyMiddleware, compose, combineReducers } from 'redux'
 import thunk from 'redux-thunk'
 import { routeReducer } from 'redux-simple-router'
 
-import counter from '../reducers/counter'
-import register from '../reducers/register'
+import reducers from '../reducers/index'
 
 const finalCreateStore = compose(
   applyMiddleware(thunk),
@@ -11,8 +10,7 @@ const finalCreateStore = compose(
 )(createStore)
 
 const reducer = combineReducers({
-  register,
-  counter,
+  reducers,
   routing: routeReducer
 })
 
