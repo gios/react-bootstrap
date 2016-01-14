@@ -4,7 +4,7 @@ const express = require('express')
 let app = new express()
 
 app.set('port', (process.env.PORT || 5000))
-app.use(express.static(__dirname + '/../dist'))
+app.use(express.static(__dirname + '/../convey'))
 app.set('view engine', 'html')
 
 app.get('/api/hello', function (req, res) {
