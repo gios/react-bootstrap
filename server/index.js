@@ -5,7 +5,7 @@ const pg = require('pg')
 let app = new express()
 
 app.set('port', (process.env.PORT || 5000))
-app.use(express.static(__dirname + '/../convey'))
+app.use(express.static(__dirname + '/../public'))
 app.set('view engine', 'html')
 
 app.get('/api/hello', function (req, res) {
