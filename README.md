@@ -1,5 +1,5 @@
-# Convey
-**Create tickets easily**
+# React-Boilerplate
+React / Redux Boilerplate
 
 ## Technologies
 * Redux
