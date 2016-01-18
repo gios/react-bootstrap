@@ -3,8 +3,8 @@ var webpack = require('webpack')
 module.exports = {
   entry: "./src/index.js",
   output: {
-    path: 'convey',
-    filename: 'convey.js'
+    path: 'public',
+    filename: 'index.js'
   },
   module: {
     loaders: [
