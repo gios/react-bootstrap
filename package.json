@@ -1,7 +1,7 @@
 {
-  "name": "react-boilerplate",
+  "name": "top-request",
   "version": "0.0.4",
-  "description": "React / Redux Boilerplate",
+  "description": "Transmit data between departments",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gios/convey.git"
+    "url": "git+https://github.com/gios/top-request.git"
   },
   "author": "Gios",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/gios/convey/issues"
+    "url": "https://github.com/gios/top-request/issues"
   },
-  "homepage": "https://github.com/gios/convey#readme",
+  "homepage": "https://github.com/gios/top-request#readme",
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.2",
     "express": "^4.13.3",
