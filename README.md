@@ -1,5 +1,5 @@
-# React-Boilerplate
-React / Redux Boilerplate
+# Top Request
+Transmit data between departments
 
 ## Technologies
 * Redux
