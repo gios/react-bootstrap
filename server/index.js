@@ -2,6 +2,7 @@
 const app = require('koa')()
 const router = require('koa-router')()
 const serve = require('koa-static')
+const bodyParser = require('koa-bodyparser')
 const jwt = require('koa-jwt')
 
 router.get('/api/hello', function *() {
@@ -10,6 +11,7 @@ router.get('/api/hello', function *() {
 
 app.use(router.routes())
 app.use(router.allowedMethods())
+app.use(bodyParser())
 app.use(serve(__dirname + '/../public'))
 
 app.listen(process.env.PORT || 5000)
