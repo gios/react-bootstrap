@@ -6,12 +6,10 @@ class Counter extends Component {
   render() {
     const { dispatch, amount } = this.props
     return (
-      <div className="row">
-        <div className="col-sm-4 col-sm-offset-4">
-          Value: {amount}<br />
-          <button onClick={() => dispatch(increase(1))}>Increase</button>
-          <button onClick={() => dispatch(decrease(1))}>Decrease</button>
-        </div>
+      <div className="col-sm-4 col-sm-offset-4" style={{textAlign: 'center'}}>
+        Value: {amount}<br />
+        <button onClick={() => dispatch(increase(1))}>Increase</button>
+        <button onClick={() => dispatch(decrease(1))}>Decrease</button>
       </div>
     )
   }
