@@ -9,4 +9,4 @@ Transmit data between departments
 * Babel
 * Immutable
 * Koa
-* ES6
+* Bootstrap
