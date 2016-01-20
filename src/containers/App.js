@@ -5,7 +5,7 @@ import { routeActions } from 'redux-simple-router'
 
 class App extends Component {
   render() {
-    const { currentRoute } = this.props
+    const { dispatch, push, currentRoute } = this.props
     return (
       <div>
         <nav className='navbar navbar-fixed-top navbar-dark bg-inverse'>
@@ -18,13 +18,19 @@ class App extends Component {
             </li>
             <li className='nav-item'>
               <Link className={currentRoute === '/counter' ? 'nav-link active' : 'nav-link'} to='/counter'>
-                Counter
+              Counter
               </Link>
             </li>
           </ul>
         </nav>
         <div className='container'>
           <div style={{marginTop: '8em'}}>
+            <button type='button' className='btn btn-primary' onClick={() => dispatch(push({
+                pathname: '/counter',
+                state: { name: 'Hello' }
+              }))}>
+              Say Hello
+            </button>
             {this.props.children}
           </div>
         </div>

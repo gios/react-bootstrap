@@ -4,10 +4,10 @@ import { increase, decrease } from '../actions/counterActions'
 
 class Counter extends Component {
   render() {
-    const { dispatch, amount } = this.props
+    const { dispatch, amount, hello } = this.props
     return (
       <div className="col-sm-4 col-sm-offset-4" style={{textAlign: 'center'}}>
-        Value: {amount}<br />
+        Value: {amount} and Say {hello}<br />
         <button onClick={() => dispatch(increase(1))}>Increase</button>
         <button onClick={() => dispatch(decrease(1))}>Decrease</button>
       </div>
@@ -17,7 +17,10 @@ class Counter extends Component {
 
 function inject(state) {
   return {
-    amount: state.reducers.number.amount
+    amount: state.reducers.number.amount,
+    hello: (state.routing.location.state !== null)
+            ? state.routing.location.state.name
+            : 'None'
   }
 }
 
