@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --progress --open --colors --config ./build/dev.config.js",
+    "start": "webpack-dev-server -d --progress --open --colors --config ./build/dev.config.js",
     "deploy": "webpack -p --config ./build/prod.config.js",
     "server": "nodemon ./server/index.js",
     "lint": "eslint ./src",
@@ -23,7 +23,6 @@
   "homepage": "https://github.com/gios/top-request#readme",
   "dependencies": {
     "bootstrap": "^4.0.0-alpha.2",
-    "history": "^1.17.0",
     "immutable": "^3.7.6",
     "koa": "^1.1.2",
     "koa-bodyparser": "^2.0.1",
@@ -35,7 +34,7 @@
     "react": "^0.14.5",
     "react-dom": "^0.14.5",
     "react-redux": "^4.0.6",
-    "react-router": "^1.0.3",
+    "react-router": "^2.0.0-rc5",
     "redux": "^3.0.5",
     "redux-simple-router": "^2.0.4"
   },
