@@ -2,7 +2,7 @@ import React, { Component } from 'react' // eslint-disable-line no-unused-vars
 import { connect } from 'react-redux'
 import { increase, decrease } from '../actions/counterActions'
 
-export default class Counter extends Component {
+class Counter extends Component {
   render() {
     const { dispatch, amount } = this.props
     return (
