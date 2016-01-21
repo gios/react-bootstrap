@@ -23,14 +23,14 @@ class App extends Component {
             </li>
           </ul>
         </nav>
-        <div className='container'>
+        <div className='container-fluid'>
+          <button type='button' className='btn btn-primary' style={{marginTop: '5em'}} onClick={() => dispatch(push({
+            pathname: '/counter',
+            state: { name: 'Hello' }
+          }))}>
+            Say Hello
+          </button>
           <div style={{marginTop: '8em'}}>
-            <button type='button' className='btn btn-primary' onClick={() => dispatch(push({
-                pathname: '/counter',
-                state: { name: 'Hello' }
-              }))}>
-              Say Hello
-            </button>
             {this.props.children}
           </div>
         </div>
