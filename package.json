@@ -1,6 +1,6 @@
 {
   "name": "top-request",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Transmit data between departments",
   "main": "index.js",
   "scripts": {

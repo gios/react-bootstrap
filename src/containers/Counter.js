@@ -17,7 +17,7 @@ class Counter extends Component {
 
 function inject(state) {
   return {
-    amount: state.reducers.number.amount,
+    amount: state.reducers.number.get('amount'),
     hello: (state.routing.location.state !== null)
             ? state.routing.location.state.name
             : 'None'

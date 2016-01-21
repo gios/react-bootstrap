@@ -1,27 +1,47 @@
 import Immutable from 'immutable'
-import { LOAD_WONDERS, LOAD_WONDERS_OK, LOAD_WONDERS_ERROR } from '../actions/wondersAction'
+import { LOAD_WONDERS, LOAD_WONDERS_OK, LOAD_WONDERS_ERROR, ADD_WONDER } from '../actions/wondersAction'
 import { UPDATE_LOCATION } from 'redux-simple-router'
 
-const wondersState = Immutable.Map({ loading: false, wonders: null, error: null })
+const wondersState = Immutable.Map({ loading: false, wonders: [], error: null })
 
-export function wonders(state = wondersState.toObject(), action) {
+function wonder(state, action) {
+  switch (action.type) {
+    case ADD_WONDER:
+      let index = state.get('wonders').size
+      return Immutable.Map({
+        id: ++index,
+        showplace: action.name,
+        popularity: Math.round(Math.random() * 10)
+      })
+    default:
+      return state
+  }
+}
+
+export function wonders(state = wondersState, action) {
   switch (action.type) {
     case LOAD_WONDERS:
     case UPDATE_LOCATION:
-      return wondersState.set('loading', true).toObject()
+      return state.set('loading', true)
     case LOAD_WONDERS_OK:
-      return wondersState.merge({
+      return state.merge({
         loading: false,
         wonders: action.wonders,
         error: null
-      }).toObject()
+      })
     case LOAD_WONDERS_ERROR:
-      return wondersState.merge({
+      return state.merge({
         loading: false,
         wonders: null,
         error: action.error
-      }).toObject()
+      })
+    case ADD_WONDER:
+      return state.merge({
+        loading: false,
+        wonders: state.get('wonders').push(wonder(state, action)),
+        error: null
+      })
     default:
-      return state;
+      return state
   }
 }
