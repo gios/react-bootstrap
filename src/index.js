@@ -9,6 +9,7 @@ import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 // Containers
 import Counter from './containers/Counter'
 import App from './containers/App'
+import Wonders from './containers/Wonders'
 
 // Components
 import IndexWelcome from './components/IndexWelcome'
@@ -28,6 +29,7 @@ render(
       <Route path="/" component={App}>
         <IndexRoute component={IndexWelcome}/>
         <Route path="/counter" component={Counter}/>
+        <Route path="/wonders" component={Wonders}/>
       </Route>
     </Router>
   </Provider>,

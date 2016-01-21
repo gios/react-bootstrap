@@ -18,7 +18,12 @@ class App extends Component {
             </li>
             <li className='nav-item'>
               <Link className={currentRoute === '/counter' ? 'nav-link active' : 'nav-link'} to='/counter'>
-              Counter
+                Counter
+              </Link>
+            </li>
+            <li className='nav-item'>
+              <Link className={currentRoute === '/wonders' ? 'nav-link active' : 'nav-link'} to='/wonders'>
+                Wonders
               </Link>
             </li>
           </ul>
