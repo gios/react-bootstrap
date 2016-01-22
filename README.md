@@ -1,5 +1,5 @@
 # Top Request
-Transmit data between departments
+React Demo
 
 ## Technologies
 * Redux
