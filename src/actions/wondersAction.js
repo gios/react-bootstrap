@@ -6,19 +6,19 @@ export const LOAD_WONDERS_ERROR = 'LOAD_WONDERS_ERROR'
 export const ADD_WONDER = 'ADD_WONDER'
 
 export function loadWondersRun() {
-  return { type: LOAD_WONDERS };
+  return { type: LOAD_WONDERS }
 }
 
 export function loadWondersOk(wonders) {
-  return { type: LOAD_WONDERS_OK, wonders };
+  return { type: LOAD_WONDERS_OK, wonders }
 }
 
 export function loadWondersError(error) {
-  return { type: LOAD_WONDERS_ERROR, error };
+  return { type: LOAD_WONDERS_ERROR, error }
 }
 
 export function addWonder(name) {
-  return { type: ADD_WONDER, name };
+  return { type: ADD_WONDER, name }
 }
 
 export function loadWonders() {
@@ -29,7 +29,7 @@ export function loadWonders() {
       .then(response => {
         if (response.status >= 400) {
           dispatch(loadWondersError(response.statusText))
-          throw new Error(response.statusText);
+          throw new Error(response.statusText)
         }
         return response.json()
       })
