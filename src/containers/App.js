@@ -1,7 +1,7 @@
 import React, { Component } from 'react' // eslint-disable-line no-unused-vars
 import { Link } from 'react-router'
 import { connect } from 'react-redux'
-import { routeActions } from 'redux-simple-router'
+import { routeActions } from 'react-router-redux'
 
 class App extends Component {
   render() {

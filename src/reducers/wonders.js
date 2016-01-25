@@ -1,6 +1,6 @@
 import Immutable from 'immutable'
 import { LOAD_WONDERS, LOAD_WONDERS_OK, LOAD_WONDERS_ERROR, ADD_WONDER } from '../actions/wondersAction'
-import { UPDATE_LOCATION } from 'redux-simple-router'
+import { UPDATE_LOCATION } from 'react-router-redux'
 
 const wondersState = Immutable.Map({ loading: false, wonders: [], error: null })
 
