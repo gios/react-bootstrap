@@ -1,5 +1,5 @@
-# Top Request
-React Demo
+# React Bootstrap
+React Bootstrap Kit
 
 ## Technologies
 * Redux
